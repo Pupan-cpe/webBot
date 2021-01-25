@@ -1,0 +1,40 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pupan Title</title>
+ 
+</head>
+<body>
+   
+  <img id="pictureUrl" width="25%">
+  <div id="qr-reader" style="width:500px"></div>
+  <div id="qr-reader-results"></div>
+ <script src="https://unpkg.com/html5-qrcode/minified/html5-qrcode.min.js"></script>
+  <script>
+    var resultContainer = document.getElementById('qr-reader-results');
+    var lastResult, countResults = 0;
+    
+    function onScanSuccess(qrCodeMessage) {
+        if (qrCodeMessage !== lastResult) {
+            ++countResults;
+            lastResult = qrCodeMessage;
+            resultContainer.innerHTML 
+                += '<div>[${countResults}] - ${qrCodeMessage}</div>';
+        }
+    }
+    
+    var html5QrcodeScanner = new Html5QrcodeScanner(
+        "qr-reader", { fps: 10, qrbox: 250 });
+    html5QrcodeScanner.render(onScanSuccess);
+  </script>
+  <style>
+    body, input {font-size:14pt}
+    input, label {vertical-align:middle}
+    .qrcode-text {padding-right:1.7em; margin-right:0}
+    .qrcode-text-btn {display:inline-block; background:url(//dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/07/1499401426qr_icon.svg) 50% 50% no-repeat; height:1em; width:1.7em; margin-left:-1.7em; cursor:pointer}
+    .qrcode-text-btn > input[type=file] {position:absolute; overflow:hidden; width:1px; height:1px; opacity:0}
+    
+  </style>
+</body>
+</html>
