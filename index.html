@@ -1,8 +1,5 @@
 <!doctype html>
-<!-- The DOCTYPE declaration above will set the     -->
-<!-- browser's rendering engine into                -->
-<!-- "Standards Mode". Replacing this declaration   -->
-<!-- with a "Quirks Mode" doctype is not supported. -->
+
 
 <html>
   <head>
@@ -14,34 +11,25 @@
     <!--                                                               -->
     <link type="text/css" rel="stylesheet" href="JsQRScanner.css">
 
-    <!--                                           -->
-    <!-- Any title is fine                         -->
-    <!--                                           -->
-    <title>JsQRScanner example</title>
+  
+    <title>Pupan Scanner </title>
     
     <!--                                           -->
     <!-- This script loads your compiled module.   -->
-    <script type="text/javascript" src="/JsQRScanner/jsPretty/jsqrscanner.nocache.js"></script>
+    <script type="text/javascript" src="file:///C:/d/projekty/jsQRScanner/war/jsqrscanner/jsqrscanner.nocache.js"></script>
   </head>
+
   <body>
 
-    <div class="row-element-set row-element-set-QRScanner">
     <!-- RECOMMENDED if your web app will not function without JavaScript enabled -->
     <noscript>
-      <div class="row-element-set error_message">
+      <div style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
         Your web browser must have JavaScript enabled
         in order for this application to display correctly.
       </div>
     </noscript>
-    <div class="row-element-set error_message" id="secure-connection-message" style="display: none;" hidden >
-      You may need to serve this page over a secure connection (https) to run JsQRScanner correctly.
-    </div>
-    <script> 
-    if (location.protocol != 'https:') { 
-      document.getElementById('secure-connection-message').style='display: block';
-      }
-      </script>  
 
+    <div class="row-element-set row-element-set-QRScanner">
       <h1>JsQRScanner example</h1>
       <div class="row-element">
         <div class="FlexPanel detailsPanel QRScannerShort">
@@ -163,47 +151,3 @@
   </script>    
   </body>
 </html>
-<style>
-    .qrscanner video {
-        max-width: 95%;
-        max-height: 75%;
-      }
-      
-      .row-element-set {
-        display: flex;
-        flex-direction: column;
-      }
-      .row-element {
-        padding: .2em 0em;
-      }
-      
-      .row-element-set-QRScanner
-      {
-        max-width: 30em; 
-        display: flex;
-        flex-direction: column;
-      }
-      
-      body
-      {
-        display: flex;
-        justify-content: center;
-      }
-      
-      .form-field-caption {
-        font-weight: bold;
-      }
-      
-      .form-field-input
-      {
-       width: 100%; 
-      }
-      
-          .error_message {
-             color: red; 
-             background-color: white; 
-             border: 1px solid red; 
-             padding: 4px; 
-             font-family: sans-serif 
-          }
-</style>
