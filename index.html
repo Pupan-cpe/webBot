@@ -9,11 +9,11 @@
 </head>
 <body>
  
-  <button type="button" class="btn" onclick="test()">Basic</button>
-  <div ><a href="https://chat-api.one.th/go_api/api/v1/openScanQRcodeWithValue" target="_blank">Scan QR Code</a </div>
+  
+  <div ><a href="https://chat-api.one.th/go_api/api/v1/openScanQRcodeWithValue" target="_blank">Scan QR Code</a> </div>
  
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
   <script>
    
     // 
@@ -21,8 +21,6 @@
 
     function oneChatCallBackQRScanner(ScanQRcodevalue){
       alert(ScanQRcodevalue);
-      console.log(ScanQRcodevalue);
-      data1 = ScanQRcodevalue;
 
       
      if (ScanQRcodevalue === ""){
@@ -46,24 +44,7 @@
       });
     }
 
-      $.ajax({
-        type: 'POST',
-        url: 'https://a25449358b186079cf9d262feb4b4984.m.pipedream.net',
-        data: {
-          "data": data1,
-          "size": 363,
-          "style": "bold",
-          "name": "pupan",
-          "hOffset": 250,
-          "vOffset": 100,
-          "alignment": "center1112",
-          "onMouseUp": "sun1.opacity = (sun1.opacity / 100) * 90;"
-      },
-        success: function(msg) {
-          alert(msg);
-        }
-      });
-
+      
 
       
    
