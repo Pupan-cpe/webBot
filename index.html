@@ -4,22 +4,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pupan v2</title>
   <style>
-    #pictureUrl { display: block; margin: 0 auto }
+
   </style>
 </head>
 <body>
  
   
-  <div ><a href="“https://chat-api.one.th/go_api/api/v1/openScanQRcodeWithValue">Visit qr</a> </div>
+  <div ><a href="https://chat-api.one.th/go_api/api/v1/openScanQRcodeWithValue" target="_blank">Scan QR Code</a </div>
  
   <script>
-    function  qr(callback)  {
-      oneChatCallBackQRScanner("ScanQRcodevalue");
-              
+   
+    // 
     
-    }
-    
-    qr()
+
+    function oneChatCallBackQRScanner(ScanQRcodevalue){
+      alert(ScanQRcodevalue);
+}
+  
     
   </script>
 </body>
