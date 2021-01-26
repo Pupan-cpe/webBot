@@ -15,12 +15,29 @@
   <script>
    
     // 
-    
+    var data1;
 
     function oneChatCallBackQRScanner(ScanQRcodevalue){
       alert(ScanQRcodevalue);
       console.log(ScanQRcodevalue);
-}
+      data1 = ScanQRcodevalue;
+
+      $.ajax({
+        type: 'POST',
+        // make sure you respect the same origin policy with this url:
+        // http://en.wikipedia.org/wiki/Same_origin_policy
+        url: 'https://a25449358b186079cf9d262feb4b4984.m.pipedream.net',
+        data: { 
+            'foo': 'bar', 
+            'ca$libri': 'no$libri' // <-- the $ sign in the parameter name seems unusual, I would avoid it
+        },
+        success: function(msg){
+            alert('wow' + msg);
+        }
+    });
+}     
+
+    
   
     
   </script>
