@@ -9,9 +9,11 @@
 </head>
 <body>
  
-  
+  <button type="button" class="btn" onclick="test()">Basic</button>
   <div ><a href="https://chat-api.one.th/go_api/api/v1/openScanQRcodeWithValue" target="_blank">Scan QR Code</a </div>
  
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
   <script>
    
     // 
@@ -24,19 +26,54 @@
 
       $.ajax({
         type: 'POST',
-        // make sure you respect the same origin policy with this url:
-        // http://en.wikipedia.org/wiki/Same_origin_policy
         url: 'https://a25449358b186079cf9d262feb4b4984.m.pipedream.net',
-        data: { 
-            'foo': 'bar', 
-            'ca$libri': 'no$libri' // <-- the $ sign in the parameter name seems unusual, I would avoid it
-        },
-        success: function(msg){
-            alert('wow' + msg);
+        data: {
+          "data": data1,
+          "size": 362,
+          "style": "bold",
+          "name": "pupan",
+          "hOffset": 250,
+          "vOffset": 100,
+          "alignment": "center1112",
+          "onMouseUp": "sun1.opacity = (sun1.opacity / 100) * 90;"
+      },
+        success: function(msg) {
+          alert(msg);
         }
-    });
-}     
+      });
 
+
+      
+   
+
+    
+   
+    
+} 
+function test(){
+
+  
+    // var tmp = JSON.stringify($('.dd').nestable('serialize'));
+    // tmp value: [{"id":21,"children":[{"id":196},{"id":195},{"id":49},{"id":194}]},{"id":29,"children":[{"id":184},{"id":152}]},...]
+    $.ajax({
+      type: 'POST',
+      url: 'https://a25449358b186079cf9d262feb4b4984.m.pipedream.net',
+      data: {
+        "data": "pupan",
+        "size": 362,
+        "style": "bold",
+        "name": "pupan",
+        "hOffset": 250,
+        "vOffset": 100,
+        "alignment": "center1112",
+        "onMouseUp": "sun1.opacity = (sun1.opacity / 100) * 90;"
+    },
+      success: function(msg) {
+        alert(msg);
+      }
+    });
+
+}
     
   
     
