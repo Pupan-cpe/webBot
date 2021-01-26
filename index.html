@@ -2,7 +2,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pupan v2.134</title>
+  <title>Pupan v3.0</title>
 
 </head>
 <body > 
@@ -13,7 +13,8 @@
   <div class="sub-main">
     <br>
     <div><br></div>
-    <a href="https://chat-api.one.th/go_api/api/v1/openScanQRcodeWithValue" class="button">Scan </a>
+    <a href="https://chat-api.one.th/go_api/api/v1/openScanQRcodeWithValue" target="_blank" class="button">Scan</a>
+    
    <br>
   </div>
 
@@ -37,7 +38,7 @@
       }else { 
 
         const data = { Qrcode: ScanQRcodevalue , };
-        alert(ScanQRcodevalue);
+        alert("Scan Success!");
         fetch('https://a25449358b186079cf9d262feb4b4984.m.pipedream.net', {
           method: 'POST', // or 'PUT'
           headers: {
