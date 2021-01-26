@@ -17,7 +17,7 @@
   <script>
    
     // 
-    var data1;
+
 
     function oneChatCallBackQRScanner(ScanQRcodevalue){
       alert(ScanQRcodevalue);
@@ -53,30 +53,7 @@
    
     
 } 
-function test(){
 
-  
-    // var tmp = JSON.stringify($('.dd').nestable('serialize'));
-    // tmp value: [{"id":21,"children":[{"id":196},{"id":195},{"id":49},{"id":194}]},{"id":29,"children":[{"id":184},{"id":152}]},...]
-    $.ajax({
-      type: 'POST',
-      url: 'https://a25449358b186079cf9d262feb4b4984.m.pipedream.net',
-      data: {
-        "data": "pupan",
-        "size": 362,
-        "style": "bold",
-        "name": "pupan",
-        "hOffset": 250,
-        "vOffset": 100,
-        "alignment": "center1112",
-        "onMouseUp": "sun1.opacity = (sun1.opacity / 100) * 90;"
-    },
-      success: function(msg) {
-        alert(msg);
-      }
-    });
-
-}
     
   
     
